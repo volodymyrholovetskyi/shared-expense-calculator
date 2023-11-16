@@ -10,49 +10,29 @@
 
     This shared-expense-calculator program can be used to calculate the cost share of each person in the group. For example, when you go on a trip with friends, where several people pay for joint expenses. At the end of the trip you will need to calculate how much each person owes and to whom. With this program, you can automate the entire process.
 
-    Three types of expense sharing:
-
-* Split Equal
-
-* Split Unequal - Amt
-
-* Split Unequal - %
-
 ## Requirements:
 
 #### Admin
 
-> * should be able to add, confirm, cancel, extend the subscription
+> * Creates a group of participants
 > 
-> * has access to view all subscribers
-
-#### Subscription
-
-> * the user must be able to register after subscribing
-
-> * after logging in, the user must be able to add other participants
+> * Automatically generates a login and password for each participant
 > 
-> * after adding other participants, the generated login and password should be sent to the participants' mail
-> 
-> * a subscribed member can create an event
-> 
-> * a signed member can create, edit, delete an event
-> 
-> * a signed member has access to create, edit, and modify expenses
-> 
-> * at the end of the deadline, participants must receive a report by email
+> * The admin must be able to create, edit, delete the event and the participant's group
 
 #### Participant
 
-> * the participant must be able to register
+> * The participant must be able to log in
 
-> * the participant has the opportunity to create a new expense, review expenses and balance
+> * The participant has the opportunity to create a new expense, review expenses and balance
+
+#### APP:
+
+> * Balance calculation logic for the event
 
 #### UI:
 
-> * information about the list of expenses should be displayed on the expenses subpage
-> 
-> * information about the balance of participants should be displayed on the balance subpage
+> * Subpage for group, expenses and balance 
 
 ## API Documentation:
 
@@ -63,6 +43,8 @@
 | Get a list of expenses associated with the event | GET /expenses/event/{id} |
 | Create a new expenses                            | POST /expenses           |
 | Create a new participant                         | POST /participants       |
+
+![class-diagram.png](class-diagram.png)
 
 ## Technologies:
 
