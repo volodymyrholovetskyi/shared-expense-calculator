@@ -14,6 +14,7 @@ public class Event {
     private Long id;
     private String name;
     @OneToMany
+    @JoinColumn(name = "event_id")
     private List<Expense> expenses = new ArrayList<>();
     private EventStatus status;
     @OneToOne

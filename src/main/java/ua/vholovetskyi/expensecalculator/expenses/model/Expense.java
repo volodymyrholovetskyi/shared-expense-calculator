@@ -1,7 +1,6 @@
 package ua.vholovetskyi.expensecalculator.expenses.model;
 
 import jakarta.persistence.*;
-
 import java.time.LocalDateTime;
 
 @Entity
