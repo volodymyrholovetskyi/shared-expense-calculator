@@ -2,6 +2,7 @@ package ua.vholovetskyi.expensecalculator.participant.model;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -15,7 +16,8 @@ public class Group {
     private Long id;
     private String name;
     @OneToMany
-    private List<Participant> participants;
+    @JoinColumn(name = "group_id")
+    private List<Participant> participants = new ArrayList<>();
 
     public Group(String name, List<Participant> participants) {
         this.name = name;

@@ -16,7 +16,7 @@ public class Expense {
     private Money amount;
     @Column(name = "event_id")
     private Long eventId;
-    private LocalDateTime create;
-    private LocalDateTime update;
+    private LocalDateTime createDate;
+    private LocalDateTime updateDate;
 
 }

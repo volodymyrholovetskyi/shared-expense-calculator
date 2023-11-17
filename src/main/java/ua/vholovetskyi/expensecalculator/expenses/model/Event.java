@@ -16,10 +16,23 @@ public class Event {
     @OneToMany
     @JoinColumn(name = "event_id")
     private List<Expense> expenses = new ArrayList<>();
+    @Enumerated(EnumType.STRING)
     private EventStatus status;
     @OneToOne
     private Group group;
-    private LocalDateTime create;
-    private LocalDateTime update;
+    private LocalDateTime createDate;
+    private LocalDateTime updateDate;
 
+    public Event() {
+    }
+
+    public Event(Long id, String name, List<Expense> expenses, EventStatus status, Group group) {
+        this.id = id;
+        this.name = name;
+        this.expenses = expenses;
+        this.status = status;
+        this.group = group;
+        this.createDate = LocalDateTime.now();
+        this.updateDate = LocalDateTime.now();
+    }
 }
