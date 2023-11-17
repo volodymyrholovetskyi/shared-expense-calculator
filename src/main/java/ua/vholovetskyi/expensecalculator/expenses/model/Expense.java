@@ -1,14 +1,13 @@
 package ua.vholovetskyi.expensecalculator.expenses.model;
 
-
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
-public class Event {
+public class Expense {
     private String name;
-    private List<Expense> expenses = new ArrayList<>();
-    private EventStatus status;
+    private String description;
+    private Money amount;
+    private Long eventId;
     private LocalDateTime create;
     private LocalDateTime update;
+
 }
